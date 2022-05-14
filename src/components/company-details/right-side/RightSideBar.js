@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../../common/Navbar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faToolbox } from "@fortawesome/free-solid-svg-icons";
 
 const RightSideBar = () => {
   return (
@@ -14,11 +16,11 @@ const RightSideBar = () => {
           {/* First Box */}
           <div className="my-4 border-2 rounded-2xl px-6 py-6 space-y-10">
             <div className="flex space-x-8">
-              <h4>box</h4>
+             <span className="text-2xl"> <FontAwesomeIcon icon={faToolbox} /> </span>
               <p>Business / Treding Name</p>
             </div>
             <div>
-              <h3>CallIcon</h3>
+             <span className="text-2xl"> <FontAwesomeIcon icon={faPhone} /> </span>
             </div>
           </div>
 

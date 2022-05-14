@@ -4,3 +4,10 @@
 .nav_menu li{
     @apply cursor-pointer;
 }
+
+.nav_icons{
+    @apply flex space-x-5;
+}
+.nav_icons li{
+    @apply cursor-pointer text-xl;
+}
