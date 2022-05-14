@@ -10,10 +10,10 @@ const Navbar = () => {
             <div className="h-16 flex justify-between items-center">
                 <div>
                     <ul className="nav_menu">
-                        <NavLink to="/" activeClassName="text-red-700"> <li>Overview</li> </NavLink>
-                        <NavLink to="/" activeClassName="text-red-700"> <li>My Loan</li> </NavLink>
-                        <NavLink to="/" activeClassName="text-red-700"> <li>Statement</li> </NavLink>
-                        <NavLink to="/" activeClassName="text-red-700"> <li>Company Details</li> </NavLink>
+                        <NavLink to="/"> <li>Overview</li> </NavLink>
+                        <NavLink to="/"> <li>My Loan</li> </NavLink>
+                        <NavLink to="/"> <li>Statement</li> </NavLink>
+                        <NavLink to="/"> <li>Company Details</li> </NavLink>
                     </ul>
                 </div>
                 <div>

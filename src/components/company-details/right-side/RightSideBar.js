@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./RightSideBar.css";
 import Navbar from "../../common/Navbar";
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faToolbox } from "@fortawesome/free-solid-svg-icons";
 
 const RightSideBar = () => {
+  const [crNumber, setCrNumber] = useState([]);
+  useEffect(() => {
+    return () => {
+      axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        const persons = res.data;
+        setCrNumber(persons)
+        console.log('data', res.data)
+      })
+    };
+  }, [])
   return (
     <>
       <div className="border-b-2">
@@ -16,11 +29,11 @@ const RightSideBar = () => {
           {/* First Box */}
           <div className="my-4 border-2 rounded-2xl px-6 py-6 space-y-10">
             <div className="flex space-x-8">
-             <span className="text-2xl"> <FontAwesomeIcon icon={faToolbox} /> </span>
+              <span className="text-2xl"> <FontAwesomeIcon icon={faToolbox} /> </span>
               <p>Business / Treding Name</p>
             </div>
             <div>
-             <span className="text-2xl"> <FontAwesomeIcon icon={faPhone} /> </span>
+              <span className="text-2xl"> <FontAwesomeIcon icon={faPhone} /> </span>
             </div>
           </div>
 
@@ -31,8 +44,8 @@ const RightSideBar = () => {
               <p>1011022074</p>
             </div>
             <div className="grid grid-cols-12 bg-gray-100 px-6 rounded-2xl">
-              <div className="col-span-5">
-                <ul className="space-y-5 py-6">
+              <div className="col-span-5 my-3">
+                <ul className="cr_number_list py-4">
                   <li> CR Status </li>
                   <li> Expiry Date of CR </li>
                   <li> Company Name in Arabic </li>
@@ -43,7 +56,18 @@ const RightSideBar = () => {
                   <li> National Address </li>
                 </ul>
               </div>
-              <div className="col-span-5 bg-white my-2"></div>
+              <div className="col-span-5 bg-white my-3">
+                <ul className="cr_number_list py-4 px-4">
+                  <li> CR Status </li>
+                  <li> Expiry Date of CR </li>
+                  <li> Company Name in Arabic </li>
+                  <li> Activity </li>
+                  <li> Entity Structure </li>
+                  <li> Date of Establishment </li>
+                  <li> Company Capital </li>
+                  <li> National Address </li>
+                </ul>
+              </div>
               <div className="col-span-2"></div>
             </div>
           </div>
