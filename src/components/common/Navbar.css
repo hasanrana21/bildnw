@@ -1,0 +1,6 @@
+.nav_menu{
+    @apply flex space-x-10;
+}
+.nav_menu li{
+    @apply cursor-pointer;
+}

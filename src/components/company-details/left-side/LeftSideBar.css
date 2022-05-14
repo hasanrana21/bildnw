@@ -1,0 +1,6 @@
+.sidebar{
+    @apply space-y-4;
+}
+.sidebar li{
+    @apply cursor-pointer;
+}
